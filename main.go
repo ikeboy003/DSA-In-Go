@@ -4,7 +4,22 @@ import "fmt"
 
 func main() {
 
-	fmt.Println(1 << 2)
+	queue := Queue[int]{}
+	queue.enqueue(1)
+	queue.enqueue(3)
+	queue.dequeue()
+	queue.printQueue()
+	fmt.Println(queue.peek())
+	queue.dequeue()
+	fmt.Println(queue.peek())
+
+	myMap := HashMap[int, string]{
+		data: make(map[int]string),
+	}
+
+	myMap.Put(1, "2")
+	val, _ := myMap.Get(1)
+	fmt.Println(val)
 
 }
 
