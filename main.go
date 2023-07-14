@@ -1,12 +1,31 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 )
 
 func main() {
+
+}
+func WorkingWithTrees() {
 	tree := newBinaryTree[int]()
+	tree.Insert(10)
+	tree.Insert(20)
+	tree.Insert(30)
+	tree.Insert(10)
+	tree.Insert(20)
+	tree.Insert(30)
+	tree.Insert(9)
+	tree.Insert(8)
+	tree.Insert(11)
+	tree.traverseInOrder()
+	fmt.Println()
+	tree.traversePostOrder()
+	fmt.Println()
+	tree.traversePreOrder()
+
 }
 
 func workingWithQueues() {
