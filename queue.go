@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Queue[T any] struct {
 	arr []T
@@ -8,7 +10,7 @@ type Queue[T any] struct {
 
 func (q *Queue[T]) Peek() (t T) {
 	if q.isEmpty() {
-		return t
+		return
 	}
 	return q.arr[0]
 }
@@ -24,10 +26,10 @@ func (q *Queue[T]) Push(item T) {
 
 func (q *Queue[T]) Pop() (t T) {
 	if q.isEmpty() {
-		return t
+		return
 	}
-	length := len(q.arr) - 1
-	t = q.arr[length]
+
+	t = q.arr[0]
 
 	q.arr = q.arr[1:]
 	return t
@@ -39,4 +41,8 @@ func (q *Queue[T]) Print() {
 		fmt.Println(v)
 	}
 
+}
+
+func (q *Queue[T]) length() int {
+	return len(q.arr)
 }

@@ -10,12 +10,6 @@ type DoublyLinkedList[T comparable] struct {
 	Size int
 }
 
-// Extends synonmous to extends
-
-type Comparable interface {
-	int | float32 | byte
-}
-
 func (l *DoublyLinkedList[T]) AddHead(item T) {
 	newItem := &Node[T]{Value: item}
 

@@ -6,8 +6,12 @@ type Node[T any] struct {
 	Previous *Node[T]
 }
 
-type TreeNode[T any] struct {
+type TreeNode[T Comparable] struct {
 	Value T
 	Left  *TreeNode[T]
 	Right *TreeNode[T]
+}
+
+type Comparable interface {
+	int | float32 | rune
 }

@@ -37,3 +37,8 @@ func (s *Stack[T]) Print() {
 	}
 
 }
+
+func (s *Stack[T]) length() int {
+
+	return len(s.arr)
+}

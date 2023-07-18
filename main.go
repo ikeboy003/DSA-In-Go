@@ -7,6 +7,25 @@ import (
 )
 
 func main() {
+	graph := NewGraph()
+}
+func treesCont() {
+
+	tree := BinaryTree[int]{}
+
+	tree.Insert(10)
+	tree.Insert(9)
+	tree.Insert(20)
+	tree.Insert(15)
+	tree.Insert(8)
+
+	tree.Insert(0)
+	tree.Insert(4)
+	tree.Insert(89)
+	tree.Insert(95)
+	tree.Insert(7)
+
+	fmt.Println(tree.sum())
 
 }
 func WorkingWithTrees() {
